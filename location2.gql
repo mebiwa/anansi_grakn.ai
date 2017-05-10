@@ -1,0 +1,4 @@
+match 
+	$town has name <reg_address_2>;
+	$county has name <reg_address_county>;
+insert (locatedin: $town, locationof: $county) isa location;

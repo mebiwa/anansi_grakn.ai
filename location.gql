@@ -1,0 +1,5 @@
+match 
+	$company has name <company_name>;
+	$town has name <reg_address_2>;
+insert (locatedin: $company, locationof: $town) isa location;
+

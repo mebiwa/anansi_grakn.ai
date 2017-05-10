@@ -1,0 +1,4 @@
+insert 
+
+$x isa town 
+	has name <reg_address_2>;

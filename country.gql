@@ -1,0 +1,4 @@
+insert 
+
+$x isa country 
+	has name <country_of_origin>;

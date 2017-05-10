@@ -1,0 +1,146 @@
+insert
+
+#Entities
+
+company sub entity    
+    has name
+    has number
+    has reg_address_1
+    has postcode
+    has company_category
+    has status
+    has accounts_category
+    has uri
+    has dissolution_date
+	has incorporation_date
+	has accounts_ref_day
+	has accounts_ref_month
+	has accounts_next_due_date
+	has accounts_last_made_date
+	has accounts_category
+	has returns_next_due_date
+	has returns_last_made_date
+    plays locatedin
+    plays employer
+    plays portfolio
+    plays parent
+    plays subsidiaryof
+    plays associate
+    plays customer
+    plays supplier
+    plays competitor1
+    plays competitor2;
+
+country sub entity
+	has name
+	plays locationof;
+
+county sub entity
+	has name
+	plays locatedin
+	plays locationof;
+
+town sub entity
+	has name
+	plays locatedin
+	plays locationof;
+
+employee sub entity
+	has name
+	plays employedby;
+
+director sub entity
+	has name
+	plays directorof;
+
+event sub entity
+	is-abstract
+	has date
+	plays conclusion;
+
+accounts_filing sub event
+	has date;
+
+returns_filing sub event
+	has date;
+
+
+name sub resource datatype string;
+number sub resource datatype string;
+reg_address_1 sub resource datatype string;
+postcode sub resource datatype string;
+company_category sub resource datatype string;
+accounts_category sub resource datatype string;
+status sub resource datatype string;
+uri sub resource datatype string;
+dissolution_date sub resource datatype string;
+incorporation_date sub resource datatype string;
+accounts_ref_day sub resource datatype string;
+accounts_ref_month sub resource datatype string;
+accounts_next_due_date sub resource datatype string;
+accounts_last_made_date sub resource datatype string;
+accounts_category sub resource datatype string;
+returns_next_due_date sub resource datatype string;
+returns_last_made_date sub resource datatype string;
+date sub resource datatype string;
+
+
+location sub relation
+    relates locatedin
+    relates locationof;
+
+locatedin sub role;
+locationof sub role;
+
+employment sub relation
+    relates employedby
+    relates employer;
+
+employedby sub role;
+employer sub role;
+
+directorship sub relation
+    relates portfolio
+    relates directorof;
+
+portfolio sub role;
+directorof sub role;
+
+subsidiary sub relation
+    relates parent
+    relates subsidiaryof;
+
+parent sub role;
+subsidiaryof sub role;
+
+association sub relation
+    relates parent
+    relates associate;
+
+parent sub role;
+associate sub role;
+
+supply sub relation
+    relates customer
+    relates supplier;
+
+customer sub role;
+supplier sub role;
+
+competing sub relation
+    relates competitor1
+    relates competitor2;
+
+competitor1 sub role;
+competitor2 sub role;
+
+
+conclude sub relation
+    relates evidence
+    relates conclusion;
+
+evidence sub role;
+conclusion sub role;
+
+
+

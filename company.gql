@@ -1,0 +1,19 @@
+insert
+
+$x isa company
+    has name <company_name>
+    has number <company_number>
+    has reg_address_1 <reg_address_1>
+    has postcode <reg_address_postcode>
+    has company_category <company_category>
+    has status <company_status>
+    has dissolution_date <dissolution_date>
+	has incorporation_date <incorporation_date>
+	has accounts_ref_day <accounts_ref_day>
+	has accounts_ref_month <accounts_ref_month>
+	has accounts_next_due_date <accounts_next_due_date>
+	has accounts_last_made_date <accounts_last_made_date>
+	has accounts_category <accounts_category>
+	has returns_next_due_date <returns_next_due_date>
+	has returns_last_made_date <returns_last_made_date>
+    has uri <uri>;

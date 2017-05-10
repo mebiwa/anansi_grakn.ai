@@ -1,0 +1,4 @@
+insert 
+
+$x isa county 
+	has name <reg_address_county>;

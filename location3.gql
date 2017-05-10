@@ -1,0 +1,4 @@
+match 
+	$county has name <reg_address_county>;
+	$country has name <country_of_origin>;
+insert (locatedin: $county, locationof: $country) isa location;
